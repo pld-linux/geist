@@ -13,8 +13,6 @@ Requires:	imlib2 >= 1.0.0
 Requires:	libxml2-devel >= 2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Geist is an object-based image editor. It provides a simple and
