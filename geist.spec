@@ -7,6 +7,7 @@ License:	BSD
 Vendor:		Tom Gilbert <gilbertt@linuxbrit.co.uk>
 Group:		X11/Applications/Graphics
 Source0:	http://linuxbrit.co.uk/downloads/%{name}-%{version}.tar.gz
+# Source0-md5:	16cc0769138481e9ca3c049d6e2b4d79
 URL:		http://www.linuxbrit.co.uk/geist.html
 Requires:	gtk+-devel >= 1.2.0
 Requires:	imlib2 >= 1.0.0
