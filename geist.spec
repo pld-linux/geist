@@ -1,48 +1,42 @@
-# this is NOT relocatable..?
-%define	name	geist
-%define	ver	0.0.3
-%define	rel	1
-%define prefix  /usr
+Summary:	Graphical object-based image editor
+Name:		geist
+Version:	0.0.3
+Release:	1
+License:	BSD
+Vendor:		Tom Gilbert <gilbertt@linuxbrit.co.uk>
+Group:		X11/Applications/Graphics
+Source0:	http://linuxbrit.co.uk/downloads/%{name}-%{version}.tar.gz
+URL:		http://www.linuxbrit.co.uk/geist.html
+Requires:	gtk+-devel >= 1.2.0
+Requires:	imlib2 >= 1.0.0
+Requires:	libxml2-devel >= 2.0
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-Summary: Graphical object-based image editor
-Name: %{name}
-Version: %{ver}
-Release: %{rel}
-Copyright: BSD
-Group: User Interface/X
-URL: http://www.linuxbrit.co.uk/geist.html
-Packager: Term <term@kempler.net>
-Vendor: Tom Gilbert <gilbertt@linuxbrit.co.uk>
-Source: http://linuxbrit.co.uk/downloads/%{name}-%{ver}.tar.gz
-BuildRoot: /var/tmp/%{name}-root
-Requires: imlib2 >= 1.0.0
-Requires: libxml2-devel >= 2.0
-Requires: gtk+-devel >= 1.2.0
-Requires: zlib
+%define		_prefix		/usr/X11R6
+%define		_mandir		%{_prefix}/man
 
 %description
-Geist is an object-based image editor. It provides a simple and flexible
-interface for developing still images, based on Imlib2, a fast graphics
-library, and GTK+.
+Geist is an object-based image editor. It provides a simple and
+flexible interface for developing still images, based on Imlib2, a
+fast graphics library, and GTK+.
 
 %prep
 %setup -q
 
 %build
-./configure --prefix=%{prefix}
-make
+%configure
+%{__make}
 
 %install
-make prefix=$RPM_BUILD_ROOT%{prefix} install
+rm -rf $RPM_BUILD_ROOT
 
-%post
-
-%postun
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(-,root,root)
-%{prefix}/share/geist/*
-%{prefix}/bin/*
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_bindir}/*
+%{_datadir}/geist
