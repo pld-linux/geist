@@ -1,5 +1,5 @@
 Summary:	Graphical object-based image editor
-Summary(pl):	Graficzny, bazuj±cy na obiektach edytor obrazków
+Summary(pl.UTF-8):   Graficzny, bazujÄ…cy na obiektach edytor obrazkÃ³w
 Name:		geist
 Version:	0.0.3
 Release:	1
@@ -20,9 +20,9 @@ Geist is an object-based image editor. It provides a simple and
 flexible interface for developing still images, based on Imlib2, a
 fast graphics library, and GTK+.
 
-%description -l pl
-Geist jest bazuj±cym na obiektach edytorem obrazków. Daje prosty i
-elastyczny interfejs do tworzenia nieruchomych obrazów, bazuj±cy
+%description -l pl.UTF-8
+Geist jest bazujÄ…cym na obiektach edytorem obrazkÃ³w. Daje prosty i
+elastyczny interfejs do tworzenia nieruchomych obrazÃ³w, bazujÄ…cy
 na szybkiej bibliotece graficznej Imlib2 oraz GTK+.
 
 %prep
