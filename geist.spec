@@ -1,5 +1,5 @@
 Summary:	Graphical object-based image editor
-Summary(pl.UTF-8):   Graficzny, bazujący na obiektach edytor obrazków
+Summary(pl.UTF-8):	Graficzny, bazujący na obiektach edytor obrazków
 Name:		geist
 Version:	0.0.3
 Release:	1
